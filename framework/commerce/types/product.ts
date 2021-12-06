@@ -43,6 +43,7 @@ export type Product = {
   variants: ProductVariant[]
   price: ProductPrice
   options: ProductOption[]
+  customFields: string
 }
 
 export type SearchProductsBody = {

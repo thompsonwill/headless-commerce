@@ -51,6 +51,8 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         className="pb-4 break-words w-full max-w-xl"
         html={product.descriptionHtml || product.description}
       />
+      <h1>Custom field checker:</h1>
+      <p>{product.customFields['edges'].length > 0  ? <p>{JSON.stringify(product.customFields)}</p>:<p>No custom fields here</p>}</p>
       <div className="flex flex-row justify-between items-center">
         <Rating value={4} />
         <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>

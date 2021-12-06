@@ -14,13 +14,25 @@ export const getProductQuery = /* GraphQL */ `
     $hasLocale: Boolean = false
     $locale: String = "null"
     $path: String!
+    
   ) {
     site {
       route(path: $path) {
         node {
           __typename
+         
           ... on Product {
+            customFields{
+              edges {
+                node {
+                  name
+                  value
+                }
+              }
+            }
+          
             ...productInfo
+            
             variants {
               edges {
                 node {
@@ -40,6 +52,7 @@ export const getProductQuery = /* GraphQL */ `
                     }
                     isInStock
                   }
+                  
                   productOptions {
                     edges {
                       node {
