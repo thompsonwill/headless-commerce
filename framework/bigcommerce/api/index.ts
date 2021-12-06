@@ -1,4 +1,4 @@
-import type { RequestInit } from '@vercel/fetch'
+import type  RequestInit  from '@vercel/fetch'
 import {
   CommerceAPI,
   CommerceAPIConfig,
