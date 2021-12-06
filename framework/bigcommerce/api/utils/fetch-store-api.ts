@@ -1,4 +1,6 @@
-import type { FetchOptions, Response } from '@vercel/fetch'
+import type { FetchOptions } from '@vercel/fetch';
+import Response from '@vercel/fetch'
+
 import type { BigcommerceConfig } from '../index'
 import { BigcommerceApiError, BigcommerceNetworkError } from './errors'
 import fetch from './fetch'
